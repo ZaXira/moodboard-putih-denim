@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Putih &amp; Denim · Taman Bermain Pak Arie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Caveat:wght@500;700&display=swap">
+<style>
+/* Layout: lembar moodboard denim — label kain berjahit benang tembaga, kolase kartu polaroid, satu kolom di HP */
+:root{
+  --bg:#F3F5F8;          /* putih kemeja yang sedikit kebiruan */
+  --paper:#FFFFFF;
+  --ink:#16233A;         /* raw indigo */
+  --ink-2:#4A5872;
+  --line:#D5DCE7;
+  --denim-light:#A9C1DC;
+  --denim-mid:#5F84B0;
+  --denim-dark:#2D4770;
+  --raw:#1C2C4A;
+  --cream:#F1E7D6;
+  --thread:#C9853A;      /* benang jahitan jeans */
+  --sun:#E9B66A;         /* cahaya sore */
+  --toga:#1F4FCC;        /* biru royal satin toga */
+  --gold:#F2C312;        /* kuning emas kalung toga */
+  --sash:#FBF8F1;        /* selempang sidang */
+  --f-display:"Archivo", "Arial Narrow", system-ui, sans-serif;
+  --f-body:"Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-hand:"Caveat", "Comic Sans MS", cursive;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1626; --paper:#16213A; --ink:#ECF1F8; --ink-2:#A7B4CA; --line:#2A3858;
+    --denim-light:#9DB7D6; --denim-mid:#6D93C2; --denim-dark:#3D5C8F; --raw:#22365C;
+    --cream:#E6DAC4; --thread:#DE9A4E; --sun:#F0C27D; --toga:#3D6BE6; --gold:#F5CD3A; --sash:#EDE7DA; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1626; --paper:#16213A; --ink:#ECF1F8; --ink-2:#A7B4CA; --line:#2A3858;
+  --denim-light:#9DB7D6; --denim-mid:#6D93C2; --denim-dark:#3D5C8F; --raw:#22365C;
+  --cream:#E6DAC4; --thread:#DE9A4E; --sun:#F0C27D; --toga:#3D6BE6; --gold:#F5CD3A; --sash:#EDE7DA; color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px;padding-block:20px 56px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;line-height:1.05}
+h2{font-size:clamp(26px,5vw,38px);font-weight:850;font-stretch:72%;letter-spacing:.005em;text-transform:uppercase}
+h3{font-size:18px;font-weight:750;font-stretch:90%}
+p{margin:0}
+a{color:var(--denim-mid);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible+span{outline:2px solid var(--thread);outline-offset:2px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--thread)}
+.hand{font-family:var(--f-hand);font-size:22px;line-height:1.1;color:var(--ink-2)}
+section{display:grid;gap:18px;padding-block:36px;border-top:2px dashed var(--line)}
+section:first-of-type{border-top:0}
+.sec-head{display:grid;gap:6px}
+.sec-head p{color:var(--ink-2);max-width:62ch}
+
+/* HERO: label kulit/kain jeans dengan jahitan */
+.hero{display:grid;gap:22px;grid-template-columns:1.25fr 1fr;align-items:stretch;padding-block:8px 28px}
+.patch{background:var(--raw);color:#F3F5F8;border-radius:14px;padding:26px 24px;position:relative;display:grid;gap:14px;align-content:start}
+.patch::before{content:"";position:absolute;inset:9px;border:2px dashed var(--thread);border-radius:9px;pointer-events:none}
+.patch .eyebrow{color:var(--sun)}
+.patch h1{font-size:clamp(46px,10vw,88px);font-weight:900;font-stretch:62%;text-transform:uppercase;letter-spacing:-.005em;line-height:.92}
+.patch h1 em{font-style:normal;color:var(--denim-light)}
+.patch .sub{font-size:16px;color:#C9D5E6;max-width:40ch}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.fact{border:1.5px solid rgba(243,245,248,.35);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+.fact b{color:var(--sun);font-weight:700}
+.collage{position:relative;min-height:300px}
+.polaroid{position:absolute;background:var(--paper);padding:10px 10px 34px;box-shadow:0 8px 24px rgba(22,35,58,.16);border-radius:3px;width:58%}
+.polaroid svg{display:block;width:100%;height:auto;border-radius:2px}
+.polaroid figcaption{position:absolute;left:12px;right:12px;bottom:6px;font-family:var(--f-hand);font-size:19px;color:var(--ink-2)}
+.p1{left:0;top:6px;transform:rotate(-5deg)}
+.p2{right:0;top:44px;transform:rotate(4deg)}
+.p3{left:22%;bottom:0;transform:rotate(-1deg);width:52%}
+.tape{position:absolute;top:-10px;left:50%;width:64px;height:20px;transform:translateX(-50%) rotate(-3deg);background:color-mix(in srgb,var(--sun) 55%,transparent);border-radius:2px}
+
+/* PALET */
+.swatches{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px}
+.sw{display:grid;gap:8px}
+.chip{aspect-ratio:3/4;border-radius:10px;border:1px solid var(--line);position:relative;overflow:hidden}
+.chip.denim::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.09) 0 2px,transparent 2px 5px)}
+.chip.stitch::before{content:"";position:absolute;left:14%;top:0;bottom:0;border-left:2px dashed var(--thread);opacity:.85}
+.sw b{font-size:13px;font-weight:700;display:block}
+.sw span{font-size:12px;color:var(--ink-2);display:block}
+.callout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.note{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;display:grid;gap:6px}
+.note h3{font-size:15px;text-transform:uppercase;letter-spacing:.06em;font-stretch:100%}
+.note ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.note.yes h3{color:var(--denim-mid)}
+.note.no h3{color:var(--thread)}
+
+/* GRADASI DENIM */
+.gradient-row{display:flex;gap:6px;align-items:flex-end;overflow-x:auto;padding-bottom:4px}
+.leg{flex:1 0 46px;display:grid;gap:6px;justify-items:center;font-size:11px;color:var(--ink-2);text-align:center}
+.leg i{display:block;width:100%;height:120px;border-radius:6px 6px 3px 3px;position:relative}
+.leg i::after{content:"";position:absolute;left:50%;top:10px;bottom:0;border-left:2px dashed var(--thread);opacity:.6}
+
+/* OUTFIT */
+.outfits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:12px;align-content:start}
+.card .fig{background:color-mix(in srgb,var(--denim-light) 22%,var(--paper));border-radius:10px;display:grid;place-items:center;padding:10px}
+.card .fig svg{width:100%;max-width:220px;height:auto}
+.card ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:color-mix(in srgb,var(--thread) 18%,transparent);color:var(--thread)}
+
+/* RUNDOWN */
+.timeline{display:grid;gap:0;position:relative}
+.slot{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);align-items:start}
+.slot:last-child{border-bottom:0}
+.slot time{font-family:var(--f-display);font-weight:800;font-stretch:75%;font-size:22px;font-variant-numeric:tabular-nums;color:var(--denim-mid);line-height:1.1}
+.slot.sun time{color:var(--thread)}
+.slot div{display:grid;gap:2px;min-width:0}
+.slot p{color:var(--ink-2)}
+.sunbar{height:12px;border-radius:999px;background:linear-gradient(90deg,var(--denim-light) 0%,var(--sun) 72%,var(--thread) 92%,var(--raw) 100%);position:relative;margin-top:6px}
+.sunlabels{display:flex;justify-content:space-between;font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+
+/* SPOTS */
+.spots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.spot{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;align-content:start}
+.spot .scene{height:118px;position:relative}
+.spot .scene svg{width:100%;height:100%;display:block}
+.spot .body{padding:14px 16px 16px;display:grid;gap:8px}
+.spot .no{font-family:var(--f-display);font-weight:900;font-stretch:62%;font-size:15px;color:var(--thread);letter-spacing:.08em;text-transform:uppercase}
+.spot ul{margin:0;padding-left:18px;display:grid;gap:3px}
+.spot .hand{font-size:20px}
+
+/* FORMASI */
+.formations{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.form{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:8px;align-content:start}
+.form svg{width:100%;height:auto;display:block}
+.form b{font-size:14px}
+.form p{font-size:13px;color:var(--ink-2)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:13px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:14px;height:14px;border-radius:50%;display:inline-block;border:2px solid var(--raw)}
+
+/* VIDEO STORYBOARD */
+.board{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:scene}
+.frame{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px;display:grid;gap:6px;align-content:start}
+.frame .shot{aspect-ratio:9/16;max-height:170px;width:100%;border-radius:6px;background:var(--raw);position:relative;overflow:hidden;display:grid;place-items:center;color:#F3F5F8;font-family:var(--f-hand);font-size:18px;text-align:center;padding:8px}
+.frame .shot::before{counter-increment:scene;content:"0" counter(scene);position:absolute;top:6px;left:8px;font-family:var(--f-display);font-weight:800;font-size:12px;color:var(--sun);letter-spacing:.08em}
+.frame .shot::after{content:"";position:absolute;inset:5px;border:1px dashed rgba(233,182,106,.55);border-radius:4px}
+.frame b{font-size:13px}
+.frame p{font-size:12.5px;color:var(--ink-2)}
+.frame .dur{font-size:11px;font-weight:700;color:var(--thread);font-variant-numeric:tabular-nums}
+
+/* REFERENSI + CHECKLIST */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.refs{display:grid;gap:8px}
+.ref{display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:10px 12px;text-decoration:none;color:var(--ink)}
+.ref:hover{border-color:var(--denim-mid)}
+.ref .k{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--thread);min-width:62px}
+.ref span{min-width:0;overflow-wrap:anywhere;font-size:14px}
+.checks{display:grid;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.checks label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;padding:3px 0}
+.checks input{position:absolute;opacity:0;width:1px;height:1px}
+.checks .box{flex:0 0 20px;height:20px;border:2px solid var(--denim-mid);border-radius:5px;display:grid;place-items:center;margin-top:1px}
+.checks input:checked + .box{background:var(--denim-mid)}
+.checks input:checked + .box::after{content:"";width:6px;height:10px;border:solid var(--paper);border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px)}
+.checks input:checked ~ .t{color:var(--ink-2);text-decoration:line-through}
+.checks .grp{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--thread);margin-top:8px}
+.checks .grp:first-child{margin-top:0}
+.reset{justify-self:start;background:none;border:1.5px solid var(--line);color:var(--ink-2);border-radius:999px;padding:5px 12px;font:600 12px var(--f-body);cursor:pointer;margin-top:6px}
+footer{padding-top:28px;border-top:2px dashed var(--line);display:grid;gap:6px;color:var(--ink-2);font-size:13px}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr}
+  .collage{min-height:330px;max-width:460px;width:100%;justify-self:center}
+  .swatches{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .outfits{grid-template-columns:1fr}
+  .card{grid-template-columns:150px 1fr;align-items:start}
+  .card .fig{grid-row:span 3}
+  .formations{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .board{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .two,.callout,.spots{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .card{grid-template-columns:1fr}
+  .card .fig{grid-row:auto}
+  .slot{grid-template-columns:72px 1fr;gap:12px}
+  .slot time{font-size:19px}
+  .collage{min-height:280px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .polaroid{transition:transform .25s ease}
+  .polaroid:hover{transform:rotate(0) scale(1.03);z-index:2}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+<!-- HERO -->
+<header class="hero">
+  <div class="patch">
+    <span class="eyebrow">Moodboard · Foto &amp; Video Bimbingan</span>
+    <h1>Putih<br><em>&amp; Denim</em></h1>
+    <p class="sub">Taman Bermain Pak Arie: 7 mahasiswa dan dosen pembimbingnya. Temanya <b>bercerita</b>, dari ruang bimbingan sampai pakai selempang.</p>
+    <div class="facts">
+      <span class="fact"><b>Minggu</b> 8 Nov 2026</span>
+      <span class="fact"><b>15.00</b> WIB</span>
+      <span class="fact"><b>Kampus</b></span>
+      <span class="fact"><b>8</b> orang</span>
+    </div>
+  </div>
+  <div class="collage" aria-hidden="true">
+    <figure class="polaroid p1" style="margin:0"><span class="tape"></span>
+      <svg viewBox="0 0 200 150"><rect width="200" height="150" fill="var(--denim-light)"/><rect y="98" width="200" height="52" fill="var(--denim-mid)"/>
+        <g id="row">
+          <circle cx="30" cy="62" r="9" fill="var(--cream)"/><rect x="20" y="72" width="20" height="24" rx="4" fill="#FFFFFF"/><rect x="21" y="96" width="18" height="30" fill="var(--denim-dark)"/>
+          <circle cx="58" cy="60" r="9" fill="#FFFFFF"/><rect x="48" y="70" width="20" height="26" rx="4" fill="#FFFFFF"/><rect x="49" y="96" width="18" height="30" fill="var(--denim-light)" stroke="var(--raw)" stroke-width=".6"/>
+          <circle cx="86" cy="58" r="9" fill="var(--cream)"/><rect x="76" y="68" width="20" height="28" rx="4" fill="#FFFFFF"/><rect x="77" y="96" width="18" height="30" fill="var(--raw)"/>
+          <circle cx="114" cy="56" r="9.5" fill="var(--cream)"/><rect x="103" y="66" width="22" height="30" rx="4" fill="#FFFFFF"/><rect x="104" y="96" width="20" height="30" fill="var(--denim-mid)"/>
+          <circle cx="142" cy="59" r="9" fill="#FFFFFF"/><rect x="132" y="69" width="20" height="27" rx="4" fill="#FFFFFF"/><rect x="133" y="96" width="18" height="30" fill="var(--denim-dark)"/>
+          <circle cx="170" cy="61" r="9" fill="var(--cream)"/><rect x="160" y="71" width="20" height="25" rx="4" fill="#FFFFFF"/><rect x="161" y="96" width="18" height="30" fill="var(--denim-mid)"/>
+        </g>
+        <line x1="20" y1="72" x2="40" y2="94" stroke="var(--gold)" stroke-width="3"/><line x1="48" y1="70" x2="68" y2="94" stroke="var(--gold)" stroke-width="3"/><line x1="76" y1="68" x2="96" y2="94" stroke="var(--gold)" stroke-width="3"/><line x1="132" y1="69" x2="152" y2="94" stroke="var(--gold)" stroke-width="3"/><line x1="160" y1="71" x2="180" y2="94" stroke="var(--gold)" stroke-width="3"/>
+      </svg>
+      <figcaption>depan kampus, full team</figcaption>
+    </figure>
+    <figure class="polaroid p2" style="margin:0"><span class="tape"></span>
+      <svg viewBox="0 0 200 150"><defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--denim-light)"/><stop offset="1" stop-color="var(--sun)"/></linearGradient></defs>
+        <rect width="200" height="150" fill="url(#sky)"/><circle cx="150" cy="88" r="22" fill="#FFF3DC" opacity=".85"/><rect y="112" width="200" height="38" fill="var(--raw)"/>
+        <g fill="var(--raw)"><circle cx="40" cy="70" r="8"/><rect x="31" y="79" width="18" height="34" rx="4"/><circle cx="68" cy="58" r="8"/><rect x="59" y="67" width="18" height="30" rx="4"/><rect x="61" y="96" width="5" height="16" transform="rotate(-20 63 96)"/><rect x="70" y="96" width="5" height="16" transform="rotate(20 72 96)"/><circle cx="98" cy="70" r="8"/><rect x="89" y="79" width="18" height="34" rx="4"/></g>
+        <g stroke="var(--raw)" stroke-width="3" stroke-linecap="round"><line x1="59" y1="70" x2="50" y2="54"/><line x1="77" y1="70" x2="86" y2="54"/></g>
+      </svg>
+      <figcaption>rooftop, jam emas</figcaption>
+    </figure>
+    <figure class="polaroid p3" style="margin:0"><span class="tape"></span>
+      <svg viewBox="0 0 200 140"><rect width="200" height="140" fill="var(--cream)"/><rect x="0" y="92" width="200" height="48" fill="#C9B79A"/><rect x="40" y="70" width="120" height="10" rx="2" fill="#8A6E4B"/>
+        <rect x="88" y="48" width="44" height="30" rx="2" fill="#FFFFFF" stroke="var(--ink-2)" stroke-width="1"/><line x1="94" y1="56" x2="126" y2="56" stroke="var(--line)" stroke-width="2"/><line x1="94" y1="62" x2="120" y2="62" stroke="var(--line)" stroke-width="2"/>
+        <circle cx="64" cy="40" r="9" fill="var(--ink-2)"/><rect x="54" y="50" width="20" height="22" rx="4" fill="#FFFFFF"/>
+        <circle cx="152" cy="40" r="9" fill="var(--cream)" stroke="var(--ink-2)" stroke-width="1"/><rect x="142" y="50" width="20" height="22" rx="4" fill="#FFFFFF"/>
+      </svg>
+      <figcaption>ala-ala bimbingan</figcaption>
+    </figure>
+  </div>
+</header>
+
+<!-- PALET -->
+<section id="palet">
+  <div class="sec-head">
+    <span class="eyebrow">01 · Palet warna</span>
+    <h2>Atas putih, bawah biru</h2>
+    <p>Semua orang pakai atasan putih dan bawahan jeans. Warna jeans boleh beda-beda; nanti justru kita jejerkan dari yang paling muda ke paling tua. Aksennya biru royal dan kuning emas dari kalung toga dan topi toga. Biru royal satu keluarga dengan denim, jadi semuanya tetap senada.</p>
+  </div>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#FFFFFF"></div><b>Putih kemeja</b><span>Atasan semua orang</span></div>
+    <div class="sw"><div class="chip" style="background:var(--cream)"></div><b>Putih / cream</b><span>Jilbab, aksesori</span></div>
+    <div class="sw"><div class="chip denim stitch" style="background:var(--denim-light)"></div><b>Light wash</b><span>Jeans biru muda</span></div>
+    <div class="sw"><div class="chip denim stitch" style="background:var(--denim-mid)"></div><b>Mid wash</b><span>Jeans biru klasik</span></div>
+    <div class="sw"><div class="chip denim stitch" style="background:var(--raw)"></div><b>Dark / raw</b><span>Jeans biru tua</span></div>
+    <div class="sw"><div class="chip" style="background:linear-gradient(135deg,var(--gold) 0 50%,var(--toga) 50% 100%)"></div><b>Emas + biru royal</b><span>Kalung &amp; topi toga</span></div>
+  </div>
+  <div class="callout">
+    <div class="note yes"><h3>Boleh banget</h3>
+      <ul>
+        <li>Kemeja putih polos, termasuk kemeja waktu sidang</li>
+        <li>Celana jeans, rok jeans, atau kulot jeans</li>
+        <li>Tone jeans beda-beda, asal masih biru</li>
+        <li>Jilbab putih (cream muda juga masuk)</li>
+        <li>Sepatu bebas, lebih rapi kalau putih atau netral</li>
+      </ul>
+    </div>
+    <div class="note no"><h3>Sebaiknya hindari</h3>
+      <ul>
+        <li>Bawahan putih (biar kontras atas-bawahnya jelas)</li>
+        <li>Kaos dengan logo atau tulisan besar</li>
+        <li>Jeans hitam atau abu gelap, kalau masih bisa pinjam yang biru</li>
+        <li>Aksesori kuning atau biru terang lain yang bersaing dengan kalung toga</li>
+        <li>Kemeja kusut. Setrika malam ini, ya</li>
+        <li>Kaus kaki atau tas warna mencolok</li>
+      </ul>
+    </div>
+  </div>
+  <div class="gradient-row" role="img" aria-label="Urutan tone jeans dari terang ke gelap untuk barisan foto">
+    <div class="leg"><i style="background:#C6D6E8"></i>paling muda</div>
+    <div class="leg"><i style="background:var(--denim-light)"></i></div>
+    <div class="leg"><i style="background:#86A3C8"></i></div>
+    <div class="leg"><i style="background:var(--denim-mid)"></i>tengah</div>
+    <div class="leg"><i style="background:#466996"></i></div>
+    <div class="leg"><i style="background:var(--denim-dark)"></i></div>
+    <div class="leg"><i style="background:#23385C"></i></div>
+    <div class="leg"><i style="background:var(--raw)"></i>paling tua</div>
+  </div>
+  <p class="hand">↑ "dari Sabang sampai Merauke" tone jeansnya. Jadikan konsep gradasi, bukan masalah.</p>
+</section>
+
+<!-- OUTFIT -->
+<section id="outfit">
+  <div class="sec-head">
+    <span class="eyebrow">02 · Outfit</span>
+    <h2>Siapa pakai apa</h2>
+    <p>Semua mahasiswa membawa kalung toga (kuning emas di depan, biru royal di baliknya), topi toga biru bertali kuning, selempang sidang, dan pin. Pak Arie ikut outfit cowok: kemeja putih dan blue jeans.</p>
+  </div>
+  <div class="outfits">
+    <article class="card">
+      <div class="fig"><svg id="fig-m" viewBox="0 0 120 200" role="img" aria-label="Ilustrasi mahasiswa: kemeja putih, kalung toga kuning-biru, selempang sidang, topi toga biru, jeans biru"></svg></div>
+      <span class="tag">3 mahasiswa</span>
+      <ul>
+        <li>Kemeja putih, lengan panjang digulung sesiku atau rapi dikancing</li>
+        <li>Blue jeans, potongan lurus atau slim</li>
+        <li>Kalung toga kuning-biru, selempang sidang, pin</li>
+        <li>Topi toga biru untuk sesi lempar topi</li>
+        <li>Opsional untuk sesi lucu-lucuan: kacamata hitam</li>
+      </ul>
+    </article>
+    <article class="card">
+      <div class="fig"><svg id="fig-f" viewBox="0 0 120 200" role="img" aria-label="Ilustrasi mahasiswi: jilbab putih, atasan putih, kalung toga, selempang, rok atau celana jeans"></svg></div>
+      <span class="tag">4 mahasiswi</span>
+      <ul>
+        <li>Atasan putih (kemeja/blus), boleh kemeja sidang</li>
+        <li>Celana, rok, atau kulot jeans</li>
+        <li>Jilbab putih. Kalau punyanya cream muda, masih aman</li>
+        <li>Kalung toga kuning-biru, selempang sidang, pin, topi toga</li>
+      </ul>
+    </article>
+    <article class="card">
+      <div class="fig"><svg id="fig-d" viewBox="0 0 120 200" role="img" aria-label="Ilustrasi dosen pembimbing: kemeja putih, jeans biru, membawa map skripsi"></svg></div>
+      <span class="tag">Pak Arie</span>
+      <ul>
+        <li>Kemeja putih dan blue jeans, sama seperti mahasiswa</li>
+        <li>Tanpa toga, supaya beliau jadi pusat cerita</li>
+        <li>Properti: map atau draft skripsi untuk adegan bimbingan</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- RUNDOWN -->
+<section id="rundown">
+  <div class="sec-head">
+    <span class="eyebrow">03 · Rundown Minggu</span>
+    <h2>Dua sesi, satu sore</h2>
+    <p>Foto dengan wess.udah (Group Basic, 1 jam), lalu video dengan Dustin/Ycapture setelah jeda sekitar 30 menit. Matahari terbenam di Jakarta sekitar 17.50, jadi sesi video dapat cahaya paling hangat.</p>
+  </div>
+  <div class="timeline">
+    <div class="slot"><time>14.45</time><div><h3>Kumpul &amp; rapikan</h3><p>Pakai kalung toga dan selempang sidang, cek kerah, jilbab, dan tali topi toga. Titip tas di satu tempat.</p></div></div>
+    <div class="slot"><time>15.00</time><div><h3>Sesi foto · Depan kampus</h3><p>Mulai dari foto formal satu tim mumpung semua masih rapi.</p></div></div>
+    <div class="slot"><time>15.20</time><div><h3>Sesi foto · Kantin</h3><p>Gazebo kantin dan tangga dekat kantin. Foto candid dan formasi bertingkat.</p></div></div>
+    <div class="slot"><time>15.40</time><div><h3>Sesi foto · Rooftop gedung 3</h3><p>Kalau rooftop dikunci, pindah ke lobby. Ruangan Pak Arie jadi bonus kalau bisa dibuka.</p></div></div>
+    <div class="slot"><time>16.00</time><div><h3>Jeda ±30 menit</h3><p>Minum, touch-up, pindah ke titik awal video. Brief singkat dengan Dustin.</p></div></div>
+    <div class="slot sun"><time>16.30</time><div><h3>Sesi video · ±1 menit jadi</h3><p>Ikuti storyboard di bawah. Cahaya mulai keemasan setelah jam 17.00.</p></div></div>
+  </div>
+  <div>
+    <div class="sunbar" aria-hidden="true"></div>
+    <div class="sunlabels"><span>15.00 terang</span><span>17.00 jam emas</span><span>17.50 magrib</span></div>
+  </div>
+</section>
+
+<!-- SPOT -->
+<section id="spot">
+  <div class="sec-head">
+    <span class="eyebrow">04 · Spot &amp; shot list</span>
+    <h2>Tiga spot, satu bonus</h2>
+    <p>Urutan spot mengikuti cerita: datang ke kampus, nongkrong, lalu merayakan di atas.</p>
+  </div>
+  <div class="spots">
+    <article class="spot">
+      <div class="scene"><svg viewBox="0 0 400 118" preserveAspectRatio="xMidYMid slice"><rect width="400" height="118" fill="var(--denim-light)"/><rect x="60" y="22" width="280" height="76" fill="#FFFFFF" opacity=".9"/><g fill="var(--denim-mid)" opacity=".55"><rect x="80" y="36" width="30" height="20"/><rect x="125" y="36" width="30" height="20"/><rect x="245" y="36" width="30" height="20"/><rect x="290" y="36" width="30" height="20"/></g><rect x="178" y="50" width="44" height="48" fill="var(--denim-dark)"/><rect y="98" width="400" height="20" fill="var(--denim-mid)"/></svg></div>
+      <div class="body"><span class="no">Spot 1 · Depan kampus</span><h3>Foto resmi yang dicetak dan dibingkai</h3>
+        <ul><li>Satu baris lurus, Pak Arie di tengah</li><li>Jalan bareng ke arah kamera (burst)</li><li>Formasi gradasi jeans, terang ke gelap</li><li>Foto per orang bersama Pak Arie, kalau waktunya cukup</li></ul>
+      </div>
+    </article>
+    <article class="spot">
+      <div class="scene"><svg viewBox="0 0 400 118" preserveAspectRatio="xMidYMid slice"><rect width="400" height="118" fill="var(--cream)"/><polygon points="40,50 140,18 240,50" fill="#B98F5E"/><rect x="60" y="50" width="8" height="50" fill="#8A6E4B"/><rect x="212" y="50" width="8" height="50" fill="#8A6E4B"/><rect x="90" y="78" width="100" height="8" fill="#8A6E4B"/><g fill="var(--denim-dark)" opacity=".8"><rect x="270" y="90" width="110" height="10"/><rect x="290" y="76" width="90" height="14"/><rect x="310" y="62" width="70" height="14"/><rect x="330" y="48" width="50" height="14"/></g><rect y="100" width="400" height="18" fill="#C9B79A"/></svg></div>
+      <div class="body"><span class="no">Spot 2 · Kantin</span><h3>Candid dan formasi bertingkat</h3>
+        <ul><li>Gazebo: duduk melingkar, ngobrol, ketawa beneran</li><li>Tangga dekat kantin: 3 baris bertingkat</li><li>Detail: tangan dengan pin, sepatu berjejer</li><li>Adegan ala-ala bimbingan di meja kantin</li></ul>
+      </div>
+    </article>
+    <article class="spot">
+      <div class="scene"><svg viewBox="0 0 400 118" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="rf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--denim-light)"/><stop offset="1" stop-color="var(--sun)"/></linearGradient></defs><rect width="400" height="118" fill="url(#rf)"/><circle cx="300" cy="80" r="26" fill="#FFF3DC" opacity=".8"/><rect y="88" width="400" height="30" fill="var(--raw)"/><g stroke="var(--raw)" stroke-width="3"><line x1="0" y1="80" x2="400" y2="80"/><line x1="40" y1="80" x2="40" y2="88"/><line x1="120" y1="80" x2="120" y2="88"/><line x1="200" y1="80" x2="200" y2="88"/><line x1="280" y1="80" x2="280" y2="88"/><line x1="360" y1="80" x2="360" y2="88"/></g></svg></div>
+      <div class="body"><span class="no">Spot 3 · Rooftop gedung 3</span><h3>Langit sore dan foto loncat</h3>
+        <ul><li>Lompat bareng (ambil 3–5 kali)</li><li>Siluet berjejer membelakangi langit</li><li>Lempar topi toga biru bareng (tali kuningnya kelihatan di langit)</li><li><b>Backup:</b> lobby. Pakai tangga atau pilar untuk formasi</li></ul>
+      </div>
+    </article>
+    <article class="spot">
+      <div class="scene"><svg viewBox="0 0 400 118" preserveAspectRatio="xMidYMid slice"><rect width="400" height="118" fill="var(--paper)"/><rect x="40" y="16" width="110" height="70" fill="var(--denim-light)" opacity=".5"/><rect x="200" y="62" width="170" height="12" fill="#8A6E4B"/><rect x="250" y="40" width="50" height="24" fill="#FFFFFF" stroke="var(--ink-2)"/><rect x="250" y="20" width="50" height="16" fill="var(--line)"/><rect x="80" y="94" width="240" height="24" fill="var(--line)" opacity=".6"/><rect x="170" y="10" width="70" height="44" fill="none" stroke="var(--thread)" stroke-width="4"/></svg></div>
+      <div class="body"><span class="no">Bonus · Ruangan Pak Arie</span><h3>Kilas balik bimbingan</h3>
+        <ul><li>Pak Arie membaca draft, mahasiswa menunggu tegang</li><li>Lalu Pak Arie tanda tangan, semua lega</li><li>Properti bingkai foto kosong untuk membingkai wajah</li></ul>
+        <p class="hand">"kalo mau kasih foto yg dibingkai sangat boleh, tapi jangan sebesar pintu" — Pak Arie</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- FORMASI -->
+<section id="formasi">
+  <div class="sec-head">
+    <span class="eyebrow">05 · Formasi 8 orang</span>
+    <h2>Pak Arie selalu di tengah</h2>
+    <p>Empat formasi yang bisa langsung diminta ke fotografer. Posisi tiap mahasiswa diatur menurut tinggi badan dan tone jeans di lokasi.</p>
+  </div>
+  <div class="legend"><span><i class="dot" style="background:var(--sun)"></i>Pak Arie</span><span><i class="dot" style="background:var(--paper)"></i>Mahasiswa / mahasiswi</span></div>
+  <div class="formations" id="formations"></div>
+</section>
+
+<!-- VIDEO -->
+<section id="video">
+  <div class="sec-head">
+    <span class="eyebrow">06 · Video ±1 menit · Dustin</span>
+    <h2>Storyboard: cerita kita</h2>
+    <p>Pakai lagu dari referensi, gerakan ala beauty shot, dan sesekali ada yang ngomong ke kamera. Pembawaan senatural mungkin, jangan cuma jalan-jalan.</p>
+  </div>
+  <div class="board">
+    <div class="frame"><div class="shot">datang ke kampus</div><b>Buka</b><p>Jalan masuk dari gerbang, kamera dari belakang lalu memutar ke depan.</p><span class="dur">0:00–0:08</span></div>
+    <div class="frame"><div class="shot">"revisi lagi ya…"</div><b>Kilas balik</b><p>Adegan bimbingan dengan Pak Arie. Ekspresi tegang tapi lucu.</p><span class="dur">0:08–0:20</span></div>
+    <div class="frame"><div class="shot">pakai selempang</div><b>Berubah</b><p>Saling memakaikan kalung toga dan selempang. Close-up pin dan tangan.</p><span class="dur">0:20–0:35</span></div>
+    <div class="frame"><div class="shot">ngomong ke kamera</div><b>Suara kita</b><p>2–3 orang bilang satu kalimat pendek: kesan bimbingan, terima kasih.</p><span class="dur">0:35–0:48</span></div>
+    <div class="frame"><div class="shot">rooftop, jam emas</div><b>Tutup</b><p>Berdelapan menghadap langit, lalu menoleh ke kamera bareng.</p><span class="dur">0:48–1:00</span></div>
+  </div>
+</section>
+
+<!-- REFERENSI & CHECKLIST -->
+<section id="bawa">
+  <div class="two">
+    <div class="refs">
+      <div class="sec-head"><span class="eyebrow">07 · Referensi dari grup</span><h2>Contek ini</h2></div>
+      <a class="ref" href="https://www.instagram.com/p/DbUbLUFEo7k/" target="_blank" rel="noopener"><span class="k">Outfit</span><span>Putih + jeans, contoh grup</span></a>
+      <a class="ref" href="https://www.instagram.com/p/DfNACHiEklt/" target="_blank" rel="noopener"><span class="k">Outfit</span><span>Jeans + cream</span></a>
+      <a class="ref" href="https://www.instagram.com/p/DewYB79nc_3/" target="_blank" rel="noopener"><span class="k">Outfit</span><span>Putih cream</span></a>
+      <a class="ref" href="https://www.instagram.com/p/DeyzdugH4H5/" target="_blank" rel="noopener"><span class="k">Pose</span><span>Foto grup</span></a>
+      <a class="ref" href="https://www.threads.com/share/BAVYg4sr3n/" target="_blank" rel="noopener"><span class="k">Tema</span><span>Foto grup bercerita</span></a>
+      <a class="ref" href="https://www.instagram.com/reel/DYt1vmezfdt/" target="_blank" rel="noopener"><span class="k">Video</span><span>Referensi lagu + gerakan</span></a>
+      <a class="ref" href="https://www.instagram.com/reel/DdTFiNvTBP-/" target="_blank" rel="noopener"><span class="k">Video</span><span>Lagu sama, shot lebih natural</span></a>
+      <a class="ref" href="https://www.instagram.com/reel/DYR73PwTsaX/" target="_blank" rel="noopener"><span class="k">Video</span><span>Contoh shot yang diminta</span></a>
+      <a class="ref" href="https://drive.google.com/drive/folders/1Xs1Iw88gX0yWo0jB-KyFlbFAQ3gkKh9P" target="_blank" rel="noopener"><span class="k">Spot</span><span>Inspirasi spot foto di kampus (Drive)</span></a>
+      <p class="hand" style="margin-top:8px">tambahan dari internet ↓</p>
+      <a class="ref" href="https://www.tiktok.com/discover/denim-and-white-photoshoot-ideas?lang=en" target="_blank" rel="noopener"><span class="k">TikTok</span><span>Denim and white photoshoot ideas</span></a>
+      <a class="ref" href="https://www.pinterest.com/ideas/group-denim-photoshoot/915227654998/" target="_blank" rel="noopener"><span class="k">Pinterest</span><span>Group denim photoshoot</span></a>
+      <a class="ref" href="https://www.pinterest.com/ideas/jeans-and-shirt-graduation-pictures/914286652283/" target="_blank" rel="noopener"><span class="k">Pinterest</span><span>Jeans and shirt graduation pictures</span></a>
+      <a class="ref" href="https://www.lemon8-app.com/flyingfebruary/7138268671213945346?region=id" target="_blank" rel="noopener"><span class="k">Lemon8</span><span>10 formasi foto kelompok biar nggak sejajar</span></a>
+      <a class="ref" href="https://www.lemon8-app.com/experience/pose-wisuda-grup?region=id" target="_blank" rel="noopener"><span class="k">Lemon8</span><span>Inspirasi pose foto wisuda grup</span></a>
+      <a class="ref" href="https://www.pinterest.com/ideas/graduation-pictures-on-stairs/894805416933/" target="_blank" rel="noopener"><span class="k">Pinterest</span><span>Graduation pictures on stairs</span></a>
+      <a class="ref" href="https://www.tiktok.com/discover/graduation-video-ideas" target="_blank" rel="noopener"><span class="k">TikTok</span><span>Graduation video ideas</span></a>
+      <p style="font-size:13px;color:var(--ink-2)">Daftar lengkap dan penjelasannya ada di laporan Word.</p>
+    </div>
+    <div>
+      <div class="sec-head" style="margin-bottom:12px"><span class="eyebrow">08 · Jangan lupa bawa</span><h2>Cek sebelum berangkat</h2></div>
+      <div class="checks" id="checks"></div>
+      <button class="reset" id="reset" type="button">Hapus centang</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p><b>Taman Bermain Pak Arie</b> · Foto oleh wess.udah · Video oleh Dustin / Ycapture</p>
+  <p>Centangan checklist hanya tersimpan di HP masing-masing.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+  // ---------- Ilustrasi outfit ----------
+  var W='#FFFFFF', SKIN='#E2B98F', HAIR='#2A2018';
+  function figure(o){
+    var jeans=o.jeans, s='';
+    // kaki / bawahan
+    if(o.skirt){
+      s+='<path d="M38 112 L82 112 L92 178 L28 178 Z" fill="'+jeans+'"/>';
+      s+='<line x1="60" y1="114" x2="60" y2="176" stroke="var(--thread)" stroke-width="1.5" stroke-dasharray="3 3"/>';
+      s+='<rect x="38" y="178" width="16" height="8" rx="3" fill="#F3F5F8" stroke="var(--line)"/><rect x="66" y="178" width="16" height="8" rx="3" fill="#F3F5F8" stroke="var(--line)"/>';
+    } else {
+      s+='<path d="M40 112 L80 112 L78 184 L64 184 L60 126 L56 184 L42 184 Z" fill="'+jeans+'"/>';
+      s+='<line x1="49" y1="122" x2="48" y2="182" stroke="var(--thread)" stroke-width="1.5" stroke-dasharray="3 3"/><line x1="71" y1="122" x2="72" y2="182" stroke="var(--thread)" stroke-width="1.5" stroke-dasharray="3 3"/>';
+      s+='<rect x="38" y="184" width="20" height="8" rx="3" fill="#F3F5F8" stroke="var(--line)"/><rect x="62" y="184" width="20" height="8" rx="3" fill="#F3F5F8" stroke="var(--line)"/>';
+    }
+    // badan kemeja putih
+    s+='<path d="M36 52 Q60 44 84 52 L88 114 L32 114 Z" fill="'+W+'" stroke="var(--line)" stroke-width="1.2"/>';
+    s+='<line x1="60" y1="56" x2="60" y2="112" stroke="var(--line)" stroke-width="1.2"/>';
+    // lengan
+    s+='<path d="M36 54 L24 98 L32 100 L42 64 Z" fill="'+W+'" stroke="var(--line)" stroke-width="1.2"/><path d="M84 54 L96 98 L88 100 L78 64 Z" fill="'+W+'" stroke="var(--line)" stroke-width="1.2"/>';
+    s+='<circle cx="28" cy="102" r="4.5" fill="'+SKIN+'"/><circle cx="92" cy="102" r="4.5" fill="'+SKIN+'"/>';
+    if(o.toga){
+      // selempang sidang: diagonal dari bahu kanan ke pinggang kiri
+      s+='<path d="M78 52 L86 56 L42 112 L34 108 Z" fill="var(--sash)" stroke="var(--gold)" stroke-width="1.2"/>';
+      // kalung toga: biru royal di luar, kuning emas berbentuk V di depan
+      s+='<path d="M32 52 L46 52 L60 96 L74 52 L88 52 L64 106 L56 106 Z" fill="var(--toga)"/>';
+      s+='<path d="M38 52 L48 52 L60 90 L72 52 L82 52 L62 100 L58 100 Z" fill="var(--gold)"/>';
+      s+='<circle cx="72" cy="68" r="2.6" fill="#FFFFFF" stroke="var(--toga)" stroke-width="1"/>';
+    }
+    if(o.folder){
+      s+='<rect x="84" y="80" width="22" height="30" rx="2" fill="var(--denim-mid)" transform="rotate(8 95 95)"/><line x1="88" y1="88" x2="102" y2="90" stroke="#FFFFFF" stroke-width="1.5"/>';
+    }
+    // kepala
+    if(o.hijab){
+      s+='<path d="M42 30 Q42 8 60 8 Q78 8 78 30 L86 56 Q60 66 34 56 Z" fill="'+W+'" stroke="var(--line)" stroke-width="1.2"/>';
+      s+='<ellipse cx="60" cy="29" rx="12" ry="14" fill="'+SKIN+'"/>';
+      s+='<path d="M47 22 Q60 12 73 22" fill="none" stroke="var(--line)" stroke-width="1.2"/>';
+      if(o.toga){ s+='<path d="M34 56 L46 56 L60 92 L74 56 L86 56 L63 102 L57 102 Z" fill="var(--toga)"/><path d="M40 56 L48 56 L60 86 L72 56 L80 56 L61 96 L59 96 Z" fill="var(--gold)"/>'; }
+    } else {
+      s+='<rect x="55" y="40" width="10" height="10" fill="'+SKIN+'"/>';
+      s+='<ellipse cx="60" cy="28" rx="13" ry="15" fill="'+SKIN+'"/>';
+      s+='<path d="M47 24 Q48 10 60 11 Q74 10 73 24 Q66 17 47 24 Z" fill="'+(o.grey?'#6F6A66':HAIR)+'"/>';
+      s+='<path d="M52 48 L60 56 L68 48" fill="none" stroke="var(--line)" stroke-width="1.4"/>';
+    }
+    if(o.glasses){
+      s+='<g fill="#111318"><rect x="49" y="25" width="9" height="6" rx="2"/><rect x="62" y="25" width="9" height="6" rx="2"/><rect x="57" y="27" width="6" height="1.6"/></g>';
+    }
+    if(o.cap){
+      // topi toga biru royal + tali kuning
+      s+='<path d="M47 18 L73 18 L73 22 Q60 26 47 22 Z" fill="var(--toga)"/>';
+      s+='<path d="M60 4 L90 13 L60 22 L30 13 Z" fill="var(--toga)"/>';
+      s+='<path d="M60 13 L84 15 L84 30" fill="none" stroke="var(--gold)" stroke-width="1.6"/><path d="M81 30 L87 30 L86 38 L82 38 Z" fill="var(--gold)"/>';
+    }
+    if(o.specs){
+      s+='<g fill="none" stroke="var(--ink-2)" stroke-width="1.2"><circle cx="54" cy="28" r="4"/><circle cx="66" cy="28" r="4"/><line x1="58" y1="28" x2="62" y2="28"/></g>';
+    }
+    return s;
+  }
+  function put(id,o){var el=document.getElementById(id); if(el) el.innerHTML=figure(o);}
+  put('fig-m',{jeans:'var(--denim-mid)',toga:true,cap:true,glasses:true});
+  put('fig-f',{jeans:'var(--denim-light)',toga:true,hijab:true,skirt:true});
+  put('fig-d',{jeans:'var(--denim-dark)',folder:true,specs:true,grey:true});
+
+  // ---------- Formasi ----------
+  var forms=[
+    {t:'Baris lurus',d:'Foto resmi depan kampus. Bahu sedikit serong ke tengah.',kind:'line',
+     p:[[8,50],[20,50],[32,50],[50,50,1],[68,50],[80,50],[92,50],[44,36]]},
+    {t:'Huruf V',d:'Pak Arie paling depan, yang lain melebar ke belakang.',
+     p:[[50,74,1],[39,64],[61,64],[28,54],[72,54],[17,44],[83,44],[50,44]]},
+    {t:'Tangga 3 tingkat',d:'Tangga dekat kantin. Depan duduk, tengah dan belakang berdiri.',kind:'steps',
+     p:[[34,77],[50,77,1],[66,77],[26,55],[42,55],[58,55],[74,55],[50,33]]},
+    {t:'Lingkaran gazebo',d:'Duduk mengelilingi meja, kamera dari samping atau atas.',kind:'circle',
+     p:[[50,26,1],[71,33],[80,52],[71,71],[50,78],[29,71],[20,52],[29,33]]}
+  ];
+  // baris lurus: 8 orang sejajar, Pak Arie di tengah
+  forms[0].p=[[8,50],[20,50],[32,50],[44,50,1],[56,50],[68,50],[80,50],[92,50]];
+  var box=document.getElementById('formations');
+  forms.forEach(function(f){
+    var s='<svg viewBox="0 0 100 100" role="img" aria-label="Formasi '+f.t+'">';
+    s+='<rect x="2" y="2" width="96" height="96" rx="8" fill="color-mix(in srgb, var(--denim-light) 18%, var(--paper))"/>';
+    if(f.kind==='steps'){ s+='<rect x="12" y="66" width="76" height="22" fill="var(--line)"/><rect x="16" y="44" width="68" height="22" fill="var(--line)" opacity=".7"/><rect x="22" y="22" width="56" height="22" fill="var(--line)" opacity=".45"/>'; }
+    if(f.kind==='circle'){ s+='<circle cx="50" cy="52" r="16" fill="var(--line)"/>'; }
+    if(f.kind==='line'){ s+='<line x1="4" y1="60" x2="96" y2="60" stroke="var(--line)" stroke-width="2"/>'; }
+    s+='<text x="50" y="96" text-anchor="middle" font-size="6" fill="var(--ink-2)" font-family="Archivo, sans-serif" letter-spacing=".5">KAMERA ▼</text>';
+    f.p.forEach(function(pt){
+      var dos=pt[2]===1;
+      s+='<circle cx="'+pt[0]+'" cy="'+pt[1]+'" r="'+(dos?5.6:5)+'" fill="'+(dos?'var(--sun)':'var(--paper)')+'" stroke="var(--raw)" stroke-width="1.6"/>';
+    });
+    s+='</svg>';
+    var el=document.createElement('div'); el.className='form';
+    el.innerHTML=s+'<b>'+f.t+'</b><p>'+f.d+'</p>';
+    box.appendChild(el);
+  });
+
+  // ---------- Checklist ----------
+  var groups=[
+    ['Outfit',['Kemeja / atasan putih (sudah disetrika)','Jeans biru','Jilbab putih (mahasiswi)','Sepatu bersih']],
+    ['Atribut',['Kalung toga kuning-biru (bagian pundak)','Topi toga biru + tali kuning','Selempang sidang','Pin','Kacamata hitam (opsional)']],
+    ['Properti cerita',['Draft / map skripsi','Bingkai foto kosong (yang kecil saja)']],
+    ['Survival kit',['Power bank','Sisir, kaca kecil, tisu','Air minum','Peniti / jarum pentul cadangan']]
+  ];
+  var KEY='moodboard-putih-denim-checks', saved={};
+  try{ saved=JSON.parse(localStorage.getItem(KEY)||'{}')||{}; }catch(e){ saved={}; }
+  var wrap=document.getElementById('checks'), n=0;
+  groups.forEach(function(g){
+    var h=document.createElement('div'); h.className='grp'; h.textContent=g[0]; wrap.appendChild(h);
+    g[1].forEach(function(item){
+      var id='chk-'+(n++);
+      var l=document.createElement('label'); l.setAttribute('for',id);
+      l.innerHTML='<input type="checkbox" id="'+id+'"'+(saved[id]?' checked':'')+'><span class="box"></span><span class="t"></span>';
+      l.querySelector('.t').textContent=item;
+      wrap.appendChild(l);
+    });
+  });
+  wrap.addEventListener('change',function(e){
+    if(e.target.type!=='checkbox') return;
+    saved[e.target.id]=e.target.checked;
+    try{ localStorage.setItem(KEY,JSON.stringify(saved)); }catch(err){}
+  });
+  document.getElementById('reset').addEventListener('click',function(){
+    saved={}; try{ localStorage.removeItem(KEY); }catch(err){}
+    wrap.querySelectorAll('input').forEach(function(i){ i.checked=false; });
+  });
+})();
+</script>
+</body>
+</html>
